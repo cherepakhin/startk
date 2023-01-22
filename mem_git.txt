@@ -1,0 +1,4 @@
+git checkout dev
+git status
+git commit -a -m 'fx Readme.md'
+git push
