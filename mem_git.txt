@@ -1,0 +1,11 @@
+git checkout dev
+git status
+git commit -a -m 'fx Readme.md'
+git push
+
+git checkout -b br1
+git checkout dev
+git merge br1
+
+git branch --delete br1
+git branch --delete br2
