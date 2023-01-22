@@ -4,3 +4,5 @@ git commit -a -m 'fx Readme.md'
 git push
 
 git checkout -b br1
+git checkout dev
+git merge br1
