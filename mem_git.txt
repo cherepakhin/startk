@@ -6,3 +6,6 @@ git push
 git checkout -b br1
 git checkout dev
 git merge br1
+
+git checkout dev
+git branch --delete br3
