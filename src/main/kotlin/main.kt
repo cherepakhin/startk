@@ -44,7 +44,7 @@ fun main(args: Array<String>) {
     )
     val oldestNull = personsNull.maxByOrNull { it.age ?: 0 }
     //TODO: println("The $oldestNull")
-    println("The oldest from array with NULL is: $oldestNull")
+    // println("The oldest from array with NULL is: $oldestNull")
 
     val nameToAge = listOf("Alice" to 42, "Bob" to 28, "Carol" to 51)
 
@@ -55,9 +55,9 @@ fun main(args: Array<String>) {
     //Pair
     val cat = "Барсик"
     val catpair = cat.to(10)
-    println(catpair)
-    println(catpair.first)
-    println(catpair.second)
+    // println(catpair)
+    // println(catpair.first)
+    // println(catpair.second)
 
 
 }
