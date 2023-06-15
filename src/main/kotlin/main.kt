@@ -1,11 +1,10 @@
+import ru.perm.v.Person
+
+//import ru.perm.v.Person
+
 // Вы можете объявлять глобальные переменные.
 val PI = 3.14
 var x = 0
-
-data class Person(
-    val name: String,
-    val age: Int? = null
-)
 
 /**
  *  TODO: fun main(args: Array<String>) {

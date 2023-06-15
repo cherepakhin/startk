@@ -1,4 +1,5 @@
 import ru.perm.v.Jhava
+import java.util.*
 
 fun main(args: Array<String>) {
     var a: String?
@@ -42,9 +43,9 @@ fun main(args: Array<String>) {
     // a так НЕ!!! будет Exception. Выводится null.
     // Null будет получен после jhava.methodReturnedNull()?
     // .toUpperCase() не будет выполнен
-    println(jhava.methodReturnedNull()?.toUpperCase())
+    println(jhava.methodReturnedNull().uppercase(Locale.getDefault()))
 
     // a так НЕ!!! будет Exception. Выводится PRINT NULL (при null сработает ?: "PRINT NULL")
-    println(jhava.methodReturnedNull()?.toUpperCase() ?: "PRINT NULL")
+    println(jhava.methodReturnedNull().uppercase(Locale.getDefault()) ?: "PRINT NULL")
 }
 
