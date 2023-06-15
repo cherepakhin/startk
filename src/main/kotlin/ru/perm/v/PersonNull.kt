@@ -9,7 +9,7 @@ class PersonNull {
 
     // так НЕ требует инициализации. "lateinit" говорит,
     // что будет ПОЗЖЕ проинициализировано
-    // Но можно получить NPE. См. PersonNullTest.uninitializedPropertyAccessException
+    // Но можно получить Runtime Error NPE. См. PersonNullTest.uninitializedPropertyAccessException
     lateinit var nameLate: String
 
     // будет Runtime Error, если не инициалицировано, а помечено lateinit
