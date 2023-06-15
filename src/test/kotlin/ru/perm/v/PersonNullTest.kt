@@ -10,16 +10,15 @@ class PersonNullTest {
     @Test
     fun getErrNameLate() {
         val person = PersonNull()
-//kotlin.UninitializedPropertyAccessException: lateinit property nameLate has not been initialized
-//        assertEquals(1, person.getErrNameLate())
         person.nameLate="-"
         assertEquals("-", person.getErrNameLate())
     }
 
     @Test
-    internal fun nullExcpt() {
+    fun uninitializedPropertyAccessException() {
         val person = PersonNull()
-//kotlin.UninitializedPropertyAccessException: lateinit property nameLate has not been initialized
+//RUNTIME ERROR. kotlin.UninitializedPropertyAccessException:
+//                  lateinit property nameLate has not been initialized
         assertThrows<UninitializedPropertyAccessException> { person.getErrNameLate() }
     }
 }

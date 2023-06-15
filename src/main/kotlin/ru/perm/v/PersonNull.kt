@@ -1,7 +1,7 @@
 package ru.perm.v
 
 class PersonNull {
-//    var name: String // так требует инициализации
+//    var name: String // Так ERROR. Требует инициализации
     // Типичная инициализация
     private var nameSimple: String = ""
     // Так ошибка
@@ -9,10 +9,10 @@ class PersonNull {
 
     // так НЕ требует инициализации. "lateinit" говорит,
     // что будет ПОЗЖЕ проинициализировано
-    // Но можно получить NPE
+    // Но можно получить NPE. См. PersonNullTest.uninitializedPropertyAccessException
     lateinit var nameLate: String
 
-    // Err - потому-что не инициалицировано, а помечено lateinit
+    // будет Runtime Error, если не инициалицировано, а помечено lateinit
     fun getErrNameLate(): String {
         return nameLate
     }
