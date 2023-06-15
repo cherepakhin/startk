@@ -1,19 +1,29 @@
 package ru.perm.v
 
+
 class PersonNull {
-//    var name: String // Так ERROR. Требует инициализации
     // Типичная инициализация
     private var nameSimple: String = ""
-    // Так ошибка
-//    private var nameSimple: String = null
+
+    // ERROR в idea
+    // Требует инициализации
+    // var name: String
+
+    // ERROR в idea
+    // private var nameSimple1: String = null
 
     // так НЕ требует инициализации. "lateinit" говорит,
-    // что будет ПОЗЖЕ проинициализировано
+    // что будет проинициализировано ПОЗЖЕ
     // Но можно получить Runtime Error NPE. См. PersonNullTest.uninitializedPropertyAccessException
+    // lateinit var nameLate: String
+
+    // хоть и NULL, но инициализировать все равно нужно
+    var nameNull:String? = null
+
     lateinit var nameLate: String
 
-    // будет Runtime Error, если не инициалицировано, а помечено lateinit
     fun getErrNameLate(): String {
+        // будет Runtime Error, если не инициалицировано, а помечено lateinit
         return nameLate
     }
 }
