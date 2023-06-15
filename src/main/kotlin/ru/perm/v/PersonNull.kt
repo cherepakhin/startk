@@ -9,12 +9,12 @@ class PersonNull {
     // Требует инициализации
     // var name: String
 
-    // ERROR в idea
     // private var nameSimple1: String = null
 
     // "lateinit" НЕ требует инициализации. И говорит, что будет проинициализировано ПОЗЖЕ
     // Но можно получить Runtime Error NPE. См. PersonNullTest.uninitializedPropertyAccessException
-    // lateinit var nameLate: String
+    // lateinit var nameLate: String // ERROR в idea
+//     lateinit var nameLate: String = null // ERROR в idea
 
     // хоть "?" говорит, что можно NULL, но инициализировать все равно нужно
     var nameNull:String? = null
